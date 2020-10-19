@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+
+    <title>Website | Kelompok</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="images/AKAKOM.png" alt="" width="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="daftar.html">Daftar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main">
+        <form name="formulir" onsubmit="return validateForm()" method="post">
+            <table>
+                <tr>
+                    <td><label>Nama Lengkap</label></td>
+                    <td><label><input type="text" id="nama"></label></td>
+                </tr>
+                <tr>
+                    <td><label>Tanggal lahir</label></td>
+                    <td><label><input type="text" id="ttl"></label></td>
+                </tr>
+                <tr>
+                    <td>Umur</td>
+                    <td><input type="text" name="umur" size="20" value=""></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td><input type="radio" name="jk" size="20" value=""><label for="Laki-Laki">Laki-Laki</label>
+                        <input type="radio" name="jk" size="20" value="" label for="Perempuan">Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td><input type="text" name="alamat" size="20" value=""></td>
+                </tr>
+
+                <tr>
+                    <td><label>Pilih Jenis Kucing</label></td>
+                    <td><select name="kucing">
+                                <option>Pilih Kucing</option>
+                                <option value="persia">kucing persia</option>
+                                <option value="britania">kucing britania</option>
+                                <option value="maine coon">kucing maine coon</option>
+                                <option value="siam">kucing siam</option>
+                            </select></td>
+                </tr>
+                <tr>
+                    <td><label>No Telp</label></td>
+                    <td><label><input type="text" id="notelp"></label></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right">
+                        <input class="btn" type="submit" name="submit" value="pembelian" />
+                        <input class="btn" type="reset" name="reset" value="batal" />
+                    </td>
+                </tr>
+
+            </table>
+            <div>
+                <h4>Data pembelian: </h4>
+                <p>Nama: <span id="out_nama"></span></p>
+                <p>Umur:<span id="out_umur"></span></p>
+                <p>Alamat:<span id="out_alamat"></span></p>
+                <p>Jenis kucing yang dibeli :<span id="out_kucing"></span></p>
+            </div>
+        </form>
+        <script>
+            function validateForm() {
+                document.getElementById('out_nama').innerHTML = document.formulir.nama.value;
+                document.getElementById('out_umur').innerHTML = document.formulir.umur.value;
+                document.getElementById('out_alamat').innerHTML = document.formulir.alamat.value;
+                document.getElementById('out_kucing').innerHTML = document.formulir.kucing.value
+                return false;
+            }
+        </script>
+        <footer>
+            &copy;Toko Cat
+        </footer>
+
+    </div>
+    <!--.wrapper-->
+
+</body>
+
+</html>
